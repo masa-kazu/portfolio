@@ -1,0 +1,19 @@
+<h1>食品一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>食品</th>
+      <th>詳細</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |food| %>
+    <tr>
+      <td><%= food.title %></td>
+      <td><%= food.content %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
