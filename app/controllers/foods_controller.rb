@@ -16,9 +16,22 @@ class FoodsController < ApplicationController
     end
   end
 
+  def edit
+    @food = Food.find(params[:id])
+  end
+
+  def update
+    @food = Food.find(params[:id])
+    if @food.update(food_params) 
+      redirect_to foods_path#updateできたらindexページに行く
+    else
+      render 'edit'#できなかったらeditページのまま
+    end
+  end
+
   private
   def food_params
-    params.require(:food).permit(:title, :content, :complete)
+    params.require(:food).permit(:title, :content)
   end
 
 

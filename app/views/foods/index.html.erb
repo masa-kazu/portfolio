@@ -1,21 +1,26 @@
-<h1>食品一覧</h1>
+<h1 class="col-3">食品一覧</h1>
 
-<%= link_to '新規作成', new_food_path %>
+<div class="col-3">
+  <%= link_to '新規作成', new_food_path,class: "btn btn-primary" %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>食品</th>
-      <th>詳細</th>
-    </tr>
-  </thead>
+<div class="col-3">
+  <table class="col-12">
+    <thead>
+      <tr>
+        <th>食品</th>
+        <th>詳細</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @foods.each do |food| %>
-    <tr>
-      <td><%= food.title %></td>
-      <td><%= food.content %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+    <tbody>
+      <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.title %></td>
+        <td><%= food.content %></td>
+        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-warning" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
