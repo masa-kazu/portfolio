@@ -1,0 +1,17 @@
+<h1>食品新規作成</h1>
+
+<%= link_to '一覧へ', foods_path %>
+
+<%= form_with model: @food, local: true do |f| %>
+<div class="field">
+  <%= f.label :食品 %><br>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :詳細 %><br>
+  <%= f.text_area :content %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
