@@ -11,7 +11,7 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container">
+  <body>
     <div id="wrapper">
       <%= render 'partial/header' if current_user %>
       <% if flash[:notice] %>
@@ -24,7 +24,9 @@
         <%= flash[:alert] %>
       </div>
       <% end %>
-      <%= yield %>
+      <div  class="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

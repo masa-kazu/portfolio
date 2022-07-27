@@ -10,18 +10,56 @@
       <tr>
         <th>食品</th>
         <th>詳細</th>
+        <th>賞味期限</th>
+        <th>期限切れまで</th>
       </tr>
     </thead>
 
     <tbody>
       <% @foods.each do |food| %>
+      <% if (food.time - @today).to_i > -1 %>
       <tr>
         <td><%= food.title %></td>
         <td><%= food.content %></td>
+        <td><%= food.time %></td>
+        <td><%= (food.time - @today).to_i %>日</td>
+        <td><%= button_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
         <td><%= link_to '編集', edit_food_path(food),class: "btn btn-warning" %></td>
-        <td><%= link_to '削除', food, method: :delete, data: { confirm: 'You sure?' },class: "btn btn-danger" %></td>
+        <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
       </tr>
+      <% else %>
+      <tr>
+        <td><%= food.title %></td>
+        <td><%= food.content %></td>
+        <td><%= food.time %></td>
+        <td><%= (food.time - @today).to_i * -1 %>日賞味期限切れています</td>
+        <td><%= button_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
+        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-warning" %></td>
+        <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
+      </tr>
+      <% end %>
       <% end %>
     </tbody>
   </table>
+</div>
+
+<div>
+<h1>消費した食品</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>食品</th>
+      <th>消費日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods_done.each do |food| %>
+    <tr>
+      <td><%= food.title %></td>
+      <td><%= food.done_at.strftime('%Y-%m-%d') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>

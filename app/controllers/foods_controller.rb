@@ -1,6 +1,8 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.all
+    @today = Date.today
+    @foods_done = Food.where.not(done_at:nil) 
+    @foods = Food.where(done_at:nil).order(:time) 
   end
 
   def new
@@ -35,9 +37,16 @@ class FoodsController < ApplicationController
     redirect_to foods_path
   end
 
+  def done
+    @today = Date.today #今日の日付
+    food = Food.find(params[:id])
+    food.update(done_at: @food ) #完了ボタンを押すとdone_atカラムに完了した日時を追加
+    redirect_to :action => "index"
+  end
+
   private
   def food_params
-    params.require(:food).permit(:title, :content)
+    params.require(:food).permit(:title, :content, :time, :done_at)
   end
 
 
