@@ -1,5 +1,9 @@
 <h1>食品編集</h1>
 
+<div class="actions">
+  <%= link_to '一覧へ', foods_path %>
+</div>
+
 <%= form_with(model: @food, local: true) do |f| %>
 <div class="field">
   <%= f.label :title, "食品名" %><br>
