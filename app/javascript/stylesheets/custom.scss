@@ -3,6 +3,7 @@ body {
   background-color: #fafafa;
   font-size: 14px;
   color: #262626;
+  font-family: sans-serif;
 }
 
 .notice,
@@ -126,4 +127,16 @@ footer {
   .devise-card {
     background-color: #fafafa;
   }
+}
+
+.field {
+  padding: 10px;
+}
+
+.actions {
+  padding: 10px;
+}
+
+h1 {
+  padding: 10px;
 }
