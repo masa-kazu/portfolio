@@ -20,6 +20,43 @@ body {
 //.alert {
 //  background-color: #f2ff00;
 //}
+.sticky-top {
+  background: #026aa7;
+}
+
+li {
+  color: #fff;
+}
+
+.header-title {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+a {
+  color: #fff;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.navbar-expand-md {
+  background-color: #026aa7;
+}
+
+.navbar-toggler {
+  background-color: #026aa7;
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+//.navbar-expand-md navbar-dark bg-dark text-white {
+//  background-color: white;
+//}
 
 // header
 .header {

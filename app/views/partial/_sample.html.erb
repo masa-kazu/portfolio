@@ -1,0 +1,20 @@
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-md">
+    <a>
+      <%= link_to 'BestBefore', root_path, class: "header-title", data: {"turbolinks" => false} %>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to '食品を追加', new_food_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %>
+          </li>
+      </ul>
+    </div>
+  </nav>
+</header>
