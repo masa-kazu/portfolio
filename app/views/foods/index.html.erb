@@ -1,10 +1,12 @@
-<h1>食品一覧</h1>
+
 
 <div class="actions">
   <%= link_to '新規作成', new_food_path,class: "btn btn-primary" %>
 </div>
 
-<div>
+<div class="food-containers">
+<div class="food-container">
+<h1>食品一覧</h1>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -12,6 +14,9 @@
         <th>詳細</th>
         <th>賞味期限</th>
         <th>期限切れまで</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
 
@@ -24,7 +29,7 @@
         <td><%= food.time %></td>
         <td><%= (food.time - @today).to_i %>日</td>
         <td><%= button_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
-        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-warning" %></td>
+        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-info" %></td>
         <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
       </tr>
       <% else %>
@@ -34,7 +39,7 @@
         <td><%= food.time %></td>
         <td>現在<%= (food.time - @today).to_i * -1 %>日、賞味期限切れです。</td>
         <td><%= button_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
-        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-warning" %></td>
+        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-info" %></td>
         <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
       </tr>
       <% end %>
@@ -43,23 +48,28 @@
   </table>
 </div>
 
-<div>
+<div class="food-container">
 <h1>消費した食品</h1>
 
 <table class="table table-striped">
   <thead>
     <tr>
       <th>食品</th>
+      <th>詳細</th>
       <th>消費日</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @foods_done.each do |food| %>
     <tr>
       <td><%= food.title %></td>
+      <td><%= food.content %></td>
       <td><%= food.done_at.strftime('%Y-%m-%d') %></td>
+      <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 </div>
