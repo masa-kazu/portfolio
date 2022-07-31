@@ -21,16 +21,27 @@ body {
 //  background-color: #f2ff00;
 //}
 .sticky-top {
-  background: #026aa7;
+  background-color: #026aa7;
 }
 
 li {
   color: #fff;
 }
 
-.header-title {
+li:hover {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.navbar-brand {
   font-size: 30px;
   text-decoration: none;
+}
+
+.navbar-brand:hover {
+  background-color: #026aa7;
+  border-radius: 5px;
+  color: #fff;
 }
 
 a {
