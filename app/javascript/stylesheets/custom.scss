@@ -21,7 +21,7 @@ body {
 //  background-color: #f2ff00;
 //}
 .sticky-top {
-  background-color: #026aa7;
+  background-color: #cd853f;
 }
 
 li {
@@ -31,6 +31,7 @@ li {
 li:hover {
   background-color: #ffebcd;
   border-radius: 5px;
+  color: #502314;
 }
 
 .navbar-brand {
@@ -39,7 +40,7 @@ li:hover {
 }
 
 .navbar-brand:hover {
-  background-color: #026aa7;
+  background-color: #cd853f;
   border-radius: 5px;
   color: #fff;
 }
@@ -53,11 +54,11 @@ a {
 }
 
 .navbar-expand-md {
-  background-color: #026aa7;
+  background-color: #cd853f;
 }
 
 .navbar-toggler {
-  background-color: #026aa7;
+  background-color: #cd853f;
   border-color: #fff;
 }
 
@@ -71,7 +72,7 @@ a {
 
 // header
 .header {
-  background: #026aa7;
+  background: #cd853f;
   padding: 10px;
   .nav {
     .header_menu {
@@ -169,7 +170,7 @@ a {
 
 footer {
   color: #fff;
-  background: #026aa7;
+  background: #cd853f;
   margin-top: auto;
   text-align: center;
   align-items: center;
