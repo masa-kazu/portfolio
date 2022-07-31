@@ -76,7 +76,7 @@ a {
 
 // header
 .header {
-  background: #cd853f;
+  background-color: #cd853f;
   padding: 10px;
   .nav {
     .header_menu {
@@ -230,3 +230,9 @@ td {
 //.food-container {
 //  width: 40%;
 //}
+
+.food-container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

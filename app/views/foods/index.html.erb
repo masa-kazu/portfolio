@@ -1,12 +1,16 @@
 
 
-<div class="actions">
-  <%= link_to '食品追加', new_food_path,class: "btn btn-primary" %>
-</div>
+
 
 <div class="food-containers">
 <div class="food-container">
-<h1>食品一覧</h1>
+<div class="food-container-head">
+  <h1>食品一覧</h1>
+  <div class="actions">
+    <%= link_to '食品追加', new_food_path,class: "btn btn-primary" %>
+  </div>
+</div>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -58,6 +62,9 @@
       <th>詳細</th>
       <th>消費日</th>
       <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -66,6 +73,9 @@
       <td><%= food.title %></td>
       <td><%= food.content %></td>
       <td><%= food.done_at.strftime('%Y-%m-%d') %></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
     </tr>
     <% end %>
