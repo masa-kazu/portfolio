@@ -6,6 +6,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+            <%= link_to users_show_path, class: "nav-link" do %>
+            <span>ユーザー情報</span>
+            <i class="fa-solid fa-user"></i>
+            <% end %>
+          </li>
           <li class="nav-item">
             <%= link_to foods_path, class: "nav-link" do %>
             <span>食品一覧</span>

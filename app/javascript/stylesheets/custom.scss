@@ -195,6 +195,12 @@ footer {
   padding: 10px;
 }
 
+.user-field {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+}
+
 .actions {
   font-weight: bold;
   padding: 10px;
@@ -217,6 +223,10 @@ h1 {
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
     "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+h3 {
+  padding: 10px;
 }
 
 th {

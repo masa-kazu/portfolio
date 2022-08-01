@@ -1,0 +1,18 @@
+<h1>ユーザー情報</h1>
+
+<h3>ユーザー名</h3>
+  <div class="user-field">
+    <%= @user.name %>
+  </div>
+<h3>メールアドレス</h3>
+  <div class="user-field">
+    <%= @user.email %>
+  </div>
+<h3>プロフィール</h3>
+  <div class="user-field">
+    <%= @user.profile%>
+  </div>
+
+<div class="actions">
+  <%= link_to '戻る', :back, class: "btn btn-outline-secondary btn-sm" %>
+</div>
