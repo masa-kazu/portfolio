@@ -3,6 +3,7 @@
 
 
 <%= form_with(model: @food, local: true) do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
 <div class="field">
   <%= f.label :title, "食品名" %><br>
   <%= f.text_field :title %>

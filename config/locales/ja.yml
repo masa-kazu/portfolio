@@ -7,3 +7,7 @@ ja:
         password_confirmation: "パスワード確認"
         email: "メールアドレス"
         profile: "プロフィール"
+        user: "ユーザー"
+        title: "食品名"
+      models:
+        user: "ユーザー"
