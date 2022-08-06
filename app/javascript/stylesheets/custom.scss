@@ -291,3 +291,10 @@ td {
 //  padding: 7px 10px;
 //  border: solid 1px #333;
 //}
+
+.food-containers table {
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-all;
+}
