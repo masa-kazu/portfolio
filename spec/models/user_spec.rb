@@ -11,5 +11,12 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
   it "名がない場合、無効である" do
+    user = User.new(
+      name: "",
+      email: "testman@example.com",
+      password: "password",
+      password_confirmation: "password"
+      )
+    expect(user.valid?).to eq(false)
   end
 end
