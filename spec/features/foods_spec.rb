@@ -18,7 +18,7 @@ RSpec.feature "Foods", type: :feature do
       expect(page).to have_content "食品新規作成"
       fill_in "food[title]",         with: "Test"
       fill_in "food[content]",        with: "test"
-      fill_in "food[time]",     with: "002022-10-06"
+      fill_in "food[time]",     with: "2022-10-06"
       click_button '追加'
       expect(current_path).to eq foods_path
       expect(page).to have_content "編集"
