@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   def index
     @today = Date.today
-    @foods_done = Food.where.not(done_at:nil)
+    @foods_done = Food.where.not(done_at:nil).where(user_id:current_user.id)
     @foods = Food.where(done_at:nil).where(user_id:current_user.id).order(:time)
   end
 
