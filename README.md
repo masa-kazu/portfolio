@@ -1,24 +1,15 @@
-# README
+# BestBefore
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BestBefore は、食品の賞味期限を管理するアプリです。
+現在日本で「食品ロス」が問題になっているかと思います。
+食品ロスは、各事業所や家庭での廃棄の積み重ねによって、社会全体で環境負荷や資源の無駄使いなどの問題を招き、地球温暖化の要因となる温室効果を助長します。食品ロスが増えることで、結果的に地球温暖化を進行させてしまうのです。また、世界には、貧困により満足に食べ物を得られない人々が多くいる中で、本来食べられたであろう食品が捨てられており、食料資源が有効に活用されていないと言える問題もあります。そこで少しでも「食品ロス」を減らすために、このアプリを作成しました。
 
-Things you may want to cover:
+## デモ画像
 
-* Ruby version
+### トップ画面
 
-* System dependencies
+![スクリーンショット 2022-08-17 21 24 59](https://user-images.githubusercontent.com/64346500/185120862-d7435992-f562-46bd-9ceb-9a41b9698975.png)
 
-* Configuration
+### 一覧画面
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![スクリーンショット 2022-08-17 21 26 19](https://user-images.githubusercontent.com/64346500/185121247-6c3a55cd-ef53-4000-b9f5-a300742abe08.png)
