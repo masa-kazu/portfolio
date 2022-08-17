@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   def index
     @today = Date.today
     @foods_done = Food.where.not(done_at:nil)
-    @foods = Food.where(done_at:nil).order(:time)
+    @foods = Food.where(done_at:nil).where(user_id:current_user.id).order(:time)
   end
 
   def new
@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(food_params)
+    @food = current_user.foods.build(food_params)
     if @food.save
       redirect_to foods_path
     else
@@ -46,7 +46,7 @@ class FoodsController < ApplicationController
 
   private
   def food_params
-    params.require(:food).permit(:title, :content, :time, :done_at)
+    params.require(:food).permit(:title, :content, :time, :done_at, :user_id)
   end
 
 
