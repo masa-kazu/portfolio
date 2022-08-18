@@ -6,6 +6,10 @@ BestBefore は、食品の賞味期限を管理するアプリです。
 
 ## デモ画像
 
+### サインイン画面
+
+![スクリーンショット 2022-08-18 21 21 21](https://user-images.githubusercontent.com/64346500/185393640-983a8d50-ae91-4ead-839d-f617fd1b132e.png)
+
 ### トップ画面
 
 ![スクリーンショット 2022-08-17 21 24 59](https://user-images.githubusercontent.com/64346500/185120862-d7435992-f562-46bd-9ceb-9a41b9698975.png)
@@ -13,3 +17,29 @@ BestBefore は、食品の賞味期限を管理するアプリです。
 ### 一覧画面
 
 ![スクリーンショット 2022-08-17 21 26 19](https://user-images.githubusercontent.com/64346500/185121247-6c3a55cd-ef53-4000-b9f5-a300742abe08.png)
+
+## 機能
+
+CRUD
+賞味期限管理(期限切れ・締め切り順・消費ボタン)
+ゲストログイン(ユーザ編集不可、テストデータあり。)
+ユーザ情報編集(ゲストユーザ編集不可)
+
+## 環境
+
+ruby 2.6.9
+rails 6.1.6
+
+## 使い方
+
+git clone https://github.com/masa-kazu/portfolio.git
+
+cd hoge
+
+bundle install
+
+rails db:create
+
+rails db:migrate
+
+rails s
