@@ -20,7 +20,7 @@ BestBefore は、食品の賞味期限を管理するアプリです。
 
 ## ER 図
 
-[erd.pdf](https://github.com/masa-kazu/portfolio/files/9373935/erd.pdf)
+![スクリーンショット 2022-08-18 21 58 01](https://user-images.githubusercontent.com/64346500/185400539-7bb54110-4ba8-4fab-aaab-bcbaa0d3a20e.png)
 
 ## 機能
 
