@@ -170,6 +170,11 @@ h1 {
     "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
 }
 
+h2 {
+  font-weight: bold;
+  padding: 10px;
+}
+
 h3 {
   padding: 10px;
 }
@@ -184,6 +189,11 @@ td {
 
 .food-container-head {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-container-head-search {
   align-items: center;
   justify-content: space-between;
 }

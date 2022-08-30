@@ -1,8 +1,8 @@
-<h1>検索結果</h1>
 <div class="food-containers">
 <div class="food-container">
-<div class="food-container-head">
-  <h1>食品一覧</h1>
+<div class="food-container-head-search">
+  <h1>検索結果</h1>
+  <h2>食品一覧</h2>
 </div>
   <% if @results.length != 0 %>
     <table class="table table-striped">
@@ -42,17 +42,15 @@
       </tr>
       <% end %>
       <% end %>
+    <% else %>
+      <h3>検索結果はありません</h3>
+    <% end %>
     </tbody>
   </table>
 </div>
-  <% else %>
-    検索結果はありません
-  <% end %>
-
-  
 
 <div class="food-container">
-<h1>消費した食品</h1>
+<h2>消費した食品</h2>
 
   <% if @results_done.length != 0 %>
     <table class="table table-striped">
@@ -79,14 +77,15 @@
       <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
     </tr>
     <% end %>
+  <% else %>
+    <h3>検索結果はありません</h3>
+  <% end %>
   </tbody>
 </table>
-  <% else %>
-    検索結果はありません
-  <% end %>
-</div>
-</div>
-
+  
 <div class="actions">
   <%= link_to '戻る', foods_path, class: "btn btn-outline-secondary btn-sm" %>
 </div>
+</div>
+</div>
+
