@@ -215,3 +215,28 @@ td {
   justify-content: end;
   text-align: end;
 }
+
+.pagination > li > a {
+  border: none;
+  color: #502314;
+}
+
+.pagination > .active > a {
+  background-color: #cd853f;
+  border-radius: 15px;
+  color: #502314;
+}
+
+.pagination > li > a:hover {
+  border-radius: 15px;
+  color: #502314;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: #cd853f;
+  border-color: #cd853f;
+}
