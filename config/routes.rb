@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'top#index'
-  resources :foods
+  resources :foods do
+    collection do
+      get 'search'
+    end
+  end
   post '/foods/:id/done' => 'foods#done',   as: 'done'
 end

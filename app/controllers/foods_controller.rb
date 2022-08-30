@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  before_action :set_q, only: [:index, :search]
   def index
     @today = Date.today
     @foods_done = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
@@ -44,9 +45,19 @@ class FoodsController < ApplicationController
     redirect_to :action => "index"
   end
 
+  def search
+    @today = Date.today
+    @results_done = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
+    @results = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time)
+  end
+
   private
   def food_params
     params.require(:food).permit(:title, :content, :time, :done_at, :user_id)
+  end
+
+  def set_q
+    @q = Food.ransack(params[:q])
   end
 
 
