@@ -17,6 +17,14 @@
   <div class="user-field">
     <%= @user.profile%>
   </div>
+<h3>プロフィール画像</h3>
+  <div class="user-field">
+    <% if @user.profile_image? %>
+      <%= image_tag @user.profile_image.url %>
+    <% else %>
+      <%= image_tag("default.png") %>
+    <% end %>
+  </div>
 
 <div class="actions">
   <%= link_to '戻る', :back, class: "btn btn-outline-secondary btn-sm" %>

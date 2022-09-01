@@ -27,6 +27,7 @@ ja:
         updated_at: 更新日
         name: お名前
         profile: プロフィール
+        profile_image: プロフィール画像
     models:
       user: ユーザ
   devise:

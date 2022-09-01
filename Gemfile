@@ -73,3 +73,7 @@ gem 'devise'
 gem 'ransack'
 
 gem 'kaminari'
+
+gem 'carrierwave', '~> 2.0'
+
+gem 'mini_magick'
