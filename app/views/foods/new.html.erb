@@ -16,6 +16,10 @@
   <%= f.label :time, "賞味期限" %><br>
   <%= f.date_field :time %>
 </div>
+<div class="field">
+  <%= f.label :food_image, "食品画像" %><br>
+  <%= f.file_field :food_image %>
+</div>
 
 <div class="actions">
   <%= f.submit "追加", class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>

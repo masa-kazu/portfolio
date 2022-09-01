@@ -53,7 +53,7 @@ class FoodsController < ApplicationController
 
   private
   def food_params
-    params.require(:food).permit(:title, :content, :time, :done_at, :user_id)
+    params.require(:food).permit(:title, :content, :time, :done_at, :user_id, :food_image)
   end
 
   def set_q

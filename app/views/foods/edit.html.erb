@@ -15,6 +15,11 @@
   <%= f.label :time, "賞味期限" %><br>
   <%= f.date_field :time %>
 </div>
+<div class="field">
+  <%= f.label :food_image, "食品画像" %><br>
+  <%= image_tag @food.food_image.url if @food.food_image? %>
+  <%= f.file_field :food_image %>
+</div>
 
 <div class="actions">
   <%= f.submit "編集完了", class: "btn btn-info" %>
