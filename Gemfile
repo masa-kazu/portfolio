@@ -77,3 +77,8 @@ gem 'kaminari'
 gem 'carrierwave', '~> 2.0'
 
 gem 'mini_magick'
+
+gem 'fog-aws'
+gem "aws-sdk-s3", require: false
+
+gem 'dotenv-rails'
