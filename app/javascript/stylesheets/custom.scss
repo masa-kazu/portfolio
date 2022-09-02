@@ -163,6 +163,7 @@ footer {
 }
 
 h1 {
+  font-size: 35px;
   font-weight: bold;
   padding: 10px;
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
@@ -215,13 +216,9 @@ td {
   word-wrap: break-all;
 }
 
-.row-search {
-  justify-content: end;
-  text-align: center;
-}
-
 .row {
   text-align: center;
+  justify-content: end;
 }
 
 .pagination > li > a {
@@ -264,8 +261,14 @@ td {
 
 .food {
   padding: 5px;
+  text-align: center;
 }
 
 .badge-warning {
   margin-right: 5px;
+}
+
+.input-group {
+  padding-right: 40px;
+  align-items: center;
 }
