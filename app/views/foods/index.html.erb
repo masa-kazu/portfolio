@@ -1,87 +1,113 @@
 <div class="row">
-  <div class="search_form">
-    <%= render 'partial/search_form' %>
+  <div class="row-search">
+    <div class="search_form">
+      <%= render 'partial/search_form' %>
+    </div>
   </div>
 </div>
 <div class="food-containers">
-<div class="food-container">
-<div class="food-container-head">
-  <h1>食品一覧</h1>
-  <div class="actions">
-    <%= link_to '食品追加', new_food_path,class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
-  </div>
-</div>
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>食品</th>
-        <th>詳細</th>
-        <th>賞味期限</th>
-        <th>期限切れまで</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="food-container">
+    <div class="food-container-head">
+      <h1>食品一覧</h1>
+        <div class="actions">
+          <%= link_to '食品追加', new_food_path,class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
+        </div>
+    </div>
+    <div class="row">
       <% @foods.each do |food| %>
-      <% if (food.time - @today).to_i > -1 %>
-      <tr>
-        <td><%= food.title %></td>
-        <td><%= food.content %></td>
-        <td><%= food.time %></td>
-        <td><%= (food.time - @today).to_i %>日</td>
-        <td><%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
-        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-info" %></td>
-        <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
-      </tr>
-      <% else %>
-      <tr>
-        <td><%= food.title %></td>
-        <td><%= food.content %></td>
-        <td><%= food.time %></td>
-        <td>現在<%= (food.time - @today).to_i * -1 %>日、賞味期限切れです。</td>
-        <td><%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %></td>
-        <td><%= link_to '編集', edit_food_path(food),class: "btn btn-info" %></td>
-        <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
-      </tr>
+        <% if (food.time - @today).to_i > -1 %>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card food-card">
+              <div class="card-img-top">
+                <% if food.food_image? %>
+                  <%= image_tag food.food_image.url %>
+                <% else %>
+                  <%= image_tag("default.png") %>
+                <% end %>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5><%= food.title %></h5>
+                </div>
+                <div class="card-text">
+                  <p><%= food.content %></p>
+                </div>
+              </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">賞味期限:<%= food.time %></li>
+                  <li class="list-group-item">期限切れまで:<%= (food.time - @today).to_i %>日</li>
+                </ul>
+              <div class="card-body">
+                <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
+                <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
+                <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-img-top">
+                <% if @food.food_image? %>
+                  <%= image_tag @food.food_image.url %>
+                <% else %>
+                  <%= image_tag("default.png") %>
+                <% end %>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5><%= food.title %></h5>
+                </div>
+                <div class="card-text">
+                  <p><%= food.content %></p>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">賞味期限:<%= food.time %></li>
+                <li class="list-group-item">現在<%= (food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
+              </ul>
+              <div class="card-body">
+                <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
+                <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
+                <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
+    </div>
+  </div>
+  <div class="food-container">
+      <h1>消費した食品</h1>
+    <div class="row food-row">
+      <% @foods_done.each do |food| %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-img-top">
+              <% if food.food_image? %>
+                <%= image_tag food.food_image.url %>
+              <% else %>
+                <%= image_tag("default.png") %>
+              <% end %>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h5><%= food.title %></h5>
+              </div>
+              <div class="card-text">
+                <p><%= food.content %></p>
+              </div>
+            </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">消費日:<%= food.done_at.strftime('%Y-%m-%d') %></li>
+              </ul>
+            <div class="card-body">
+              <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
-</div>
-
-<div class="food-container">
-<h1>消費した食品</h1>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>食品</th>
-      <th>詳細</th>
-      <th>消費日</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @foods_done.each do |food| %>
-    <tr>
-      <td><%= food.title %></td>
-      <td><%= food.content %></td>
-      <td><%= food.done_at.strftime('%Y-%m-%d') %></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
+    </div>
+  </div>
 </div>
 <%= paginate @foods %>

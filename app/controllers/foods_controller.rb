@@ -2,8 +2,8 @@ class FoodsController < ApplicationController
   before_action :set_q, only: [:index, :search]
   def index
     @today = Date.today
-    @foods_done = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(5)
-    @foods = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(5)
+    @foods_done = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(6)
+    @foods = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(6)
   end
 
   def new
@@ -47,8 +47,8 @@ class FoodsController < ApplicationController
 
   def search
     @today = Date.today
-    @results_done = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(5)
-    @results = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(5)
+    @results_done = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(6)
+    @results = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(6)
   end
 
   private

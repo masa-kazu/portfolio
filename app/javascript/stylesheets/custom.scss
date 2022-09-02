@@ -198,6 +198,10 @@ td {
   justify-content: space-between;
 }
 
+.food-container {
+  padding: 15px;
+}
+
 .user-container-head {
   display: flex;
   align-items: center;
@@ -211,9 +215,13 @@ td {
   word-wrap: break-all;
 }
 
-.row {
+.row-search {
   justify-content: end;
-  text-align: end;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
 }
 
 .pagination > li > a {
@@ -239,4 +247,21 @@ td {
 .page-item.active .page-link {
   background-color: #cd853f;
   border-color: #cd853f;
+}
+
+.card-title h5 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.list-group-item {
+  text-align: left;
+}
+
+.card-text p {
+  text-align: left;
+}
+
+.card-body-btn {
+  justify-content: space-between;
 }
