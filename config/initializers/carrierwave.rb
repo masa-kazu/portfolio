@@ -5,7 +5,7 @@ require 'carrierwave/storage/fog'
 CarrierWave.configure do |config|
   config.storage :fog
   config.fog_provider = 'fog/aws'
-  config.fog_directory  = 'myportfolio-backet'
+  config.fog_directory  = 'my-portfolio-backet'
   config.fog_credentials = {
     provider: 'AWS',
     aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
