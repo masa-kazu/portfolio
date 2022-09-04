@@ -6,22 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Food.create!(
-  title: "てすと",
-  content: "てすとほげ",
+  title: "キャベツ",
+  content: "冷蔵庫保存",
   time: "2022-10-20",
   done_at: "",
   user_id: 1
 )
 Food.create!(
-  title: "てすと2",
-  content: "てすとほげ2",
+  title: "焼肉のタレ",
+  content: "常温保存",
   time: "2022-11-20",
   done_at: "",
   user_id: 1
 )
 Food.create!(
-  title: "てすと3",
-  content: "てすとほげ3",
+  title: "マヨネーズ",
+  content: "キューピー",
   time: "2022-12-20",
   done_at: "",
   user_id: 1
