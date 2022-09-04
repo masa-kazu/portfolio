@@ -26,3 +26,31 @@ Food.create!(
   done_at: "",
   user_id: 1
 )
+Food.create!(
+  title: "ツナ",
+  content: "イナバ",
+  time: "2022-12-27",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "食パン",
+  content: "冷凍",
+  time: "2022-12-25",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "菓子パン",
+  content: "常温",
+  time: "2022-10-25",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "コショウ",
+  content: "ダイショウ",
+  time: "2022-10-25",
+  done_at: "",
+  user_id: 1
+)
