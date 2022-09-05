@@ -13,7 +13,8 @@
           <%= link_to '食品追加', new_food_path,class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
         </div>
     </div>
-    <div class="card-deck">
+    <% if @foods.length != 0 %>
+      <div class="card-deck">
       <% @foods.each do |food| %>
         <% if (food.time - @today).to_i > -1 %>
           <div class="food col-sm-4">
@@ -76,10 +77,14 @@
         <% end %>
       <% end %>
     </div>
+    <% else %>
+      <h3>食品はありません</h3>
+    <% end %> 
   </div>
   <div class="food-container">
       <h1>消費した食品</h1>
-    <div class="card-deck">
+    <% if @foods_done.length != 0 %>
+      <div class="card-deck">
       <% @foods_done.each do |food| %>
         <div class="food col-sm-4">
           <div class="card h-100">
@@ -108,6 +113,9 @@
         </div>
       <% end %>
     </div>
+    <% else %>
+      <h3>消費した食品はありません</h3>
+    <% end %>
   </div>
 </div>
 <%= paginate @foods %>
