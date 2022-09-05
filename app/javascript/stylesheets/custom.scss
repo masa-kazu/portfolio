@@ -13,6 +13,7 @@ header {
 }
 
 body {
+  background-image: url("../images/パン茶色.png");
   background-color: #ffebcd;
   font-size: 14px;
   color: #502314;
@@ -258,6 +259,7 @@ td {
 
 .list-group-item {
   text-align: left;
+  background-color: #ffebcd;
 }
 
 .card-text p {
@@ -276,4 +278,8 @@ td {
 .input-group {
   padding-right: 40px;
   align-items: center;
+}
+
+.card {
+  background-color: #ffebcd;
 }
