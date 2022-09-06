@@ -1,5 +1,5 @@
 <% breadcrumb :food_show %>
-<div class="user-container-head">
+<div class="food-container-head">
   <h1>食品情報</h1>
   <div class="actions">
     <%= link_to '食品編集', edit_food_path(@food),class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
@@ -9,7 +9,7 @@
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <div class="user-field">
+      <div class="food-field">
         <% if @food.food_image? %>
          <%= image_tag @food.food_image.url %>
         <% else %>
