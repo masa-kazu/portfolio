@@ -39,16 +39,26 @@ body {
 .navbar-brand {
   font-size: 30px;
   text-decoration: none;
+  color: #fff;
 }
 
 .navbar-brand:hover {
-  background-color: #cd853f;
+  /*background-color: #cd853f;
+  color: #fff;*/
   border-radius: 5px;
-  color: #fff;
+  color: #502314;
+  background-color: #cd853f;
 }
 
 a {
-  color: #fff;
+  /*color: #fff;*/
+  color: #502314;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #502314;
+  text-decoration: none;
 }
 
 .nav-link {
@@ -201,7 +211,7 @@ td {
 }
 
 .food-container {
-  padding: 15px;
+  padding-bottom: 10px;
 }
 
 .user-container-head {
@@ -276,10 +286,14 @@ td {
 }
 
 .input-group {
-  padding-right: 40px;
+  padding-right: 25px;
   align-items: center;
 }
 
 .card {
   background-color: #ffebcd;
+}
+
+.breadcrumbs {
+  padding: 10px;
 }

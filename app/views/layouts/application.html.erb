@@ -24,7 +24,8 @@
         <%= flash[:alert] %>
       </div>
       <% end %>
-      <div  class="container">
+      <div class="container">  
+        <%= breadcrumbs separator: " &rsaquo; " %>
         <%= yield %>
       </div>
       <%= render 'partial/footer' if current_user %>
