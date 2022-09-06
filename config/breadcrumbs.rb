@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :user_show do
-  link "ユーザー", users_show_path
+  link "ユーザー情報", users_show_path
   parent :root
 end
 

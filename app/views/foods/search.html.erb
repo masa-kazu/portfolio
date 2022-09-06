@@ -12,26 +12,25 @@
           <div class="food col-md-4">
             <div class="card h-100">
               <div class="card-img-top">
-                <% if food.food_image? %>
-                  <%= image_tag food.food_image.url %>
-                <% else %>
-                  <%= image_tag("default.png") %>
+                <%= link_to food_path(food) do %>
+                  <% if food.food_image? %>
+                    <%= image_tag food.food_image.url %>
+                  <% else %>
+                    <%= image_tag("default.png") %>
+                  <% end %>
                 <% end %>
               </div>
               <div class="card-body">
                 <div class="card-title">
                   <h5><%= food.title %></h5>
                 </div>
-                <div class="card-text">
-                  <p><%= food.content %></p>
-                </div>
               </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">賞味期限:<%= food.time %></li>
                   <li class="list-group-item">期限切れまで:<%= (food.time - @today).to_i %>日</li>
                 </ul>
               <div class="card-body">
                 <div class="card-body-btn">
+                  <%= link_to '詳細', food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" %>
                   <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
                   <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
                   <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
@@ -43,26 +42,25 @@
           <div class="food col-md-4">
             <div class="card h-100">
               <div class="card-img-top">
-                <% if food.food_image? %>
-                  <%= image_tag food.food_image.url %>
-                <% else %>
-                  <%= image_tag("default.png") %>
+                <%= link_to food_path(food) do %>
+                  <% if food.food_image? %>
+                    <%= image_tag food.food_image.url %>
+                  <% else %>
+                    <%= image_tag("default.png") %>
+                  <% end %>
                 <% end %>
               </div>
               <div class="card-body">
                 <div class="card-title">
                   <h5><span class="badge badge-pill badge-warning">注意</span><%= food.title %></h5>
                 </div>
-                <div class="card-text">
-                  <p><%= food.content %></p>
-                </div>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">賞味期限:<%= food.time %></li>
                 <li class="list-group-item">現在<%= (food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
               </ul>
               <div class="card-body">
                 <div class="card-body-btn">
+                  <%= link_to '詳細', food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" %>
                   <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
                   <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
                   <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
@@ -85,24 +83,24 @@
             <div class="food col-md-4">
               <div class="card h-100">
                 <div class="card-img-top">
-                  <% if food.food_image? %>
-                    <%= image_tag food.food_image.url %>
-                  <% else %>
-                    <%= image_tag("default.png") %>
+                  <%= link_to food_path(food) do %>
+                    <% if food.food_image? %>
+                      <%= image_tag food.food_image.url %>
+                    <% else %>
+                      <%= image_tag("default.png") %>
+                    <% end %>
                   <% end %>
                 </div>
                 <div class="card-body">
                   <div class="card-title">
                     <h5><%= food.title %></h5>
                   </div>
-                  <div class="card-text">
-                    <p><%= food.content %></p>
-                  </div>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">消費日:<%= food.done_at.strftime('%Y-%m-%d') %></li>
                 </ul>
                 <div class="card-body">
+                  <%= link_to '詳細', food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" %>
                   <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
                 </div>
               </div>
