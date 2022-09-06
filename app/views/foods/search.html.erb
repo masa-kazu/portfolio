@@ -1,8 +1,9 @@
+<% breadcrumb :food_search %>
 <div class="food-containers">
   <div class="food-container">
     <div class="food-container-head-search">
       <h1>検索結果</h1>
-      <h2>食品一覧</h2>
+      <h2>食品一覧:<%= @results_total.length %>件</h2>
     </div>
     <% if @results.length != 0 %>
       <div class="card-deck">
@@ -30,9 +31,11 @@
                   <li class="list-group-item">期限切れまで:<%= (food.time - @today).to_i %>日</li>
                 </ul>
               <div class="card-body">
-                <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
-                <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
-                <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+                <div class="card-body-btn">
+                  <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
+                  <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
+                  <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+                </div>
               </div>
             </div>
           </div>
@@ -59,9 +62,11 @@
                 <li class="list-group-item">現在<%= (food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
               </ul>
               <div class="card-body">
-                <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
-                <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
-                <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+                <div class="card-body-btn">
+                  <%= link_to '消費', done_path(food.id), method: :post,class: "btn btn-success" %>
+                  <%= link_to '編集', edit_food_path(food),class: "btn btn-info" %>
+                  <%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" %>
+                </div>
               </div>
             </div>
           </div>
@@ -69,11 +74,11 @@
       <% end %>
     </div>
     <% else %>
-      <h3>検索結果はありません</h3>
+      <h3>このページに食品の検索結果はありません</h3>
     <% end %> 
   </div>
   <div class="food-container">
-    <h2>消費した食品</h2>
+    <h2>消費した食品:<%= @results_done_total.length %>件</h2>
       <% if @results_done.length != 0 %>
         <div class="card-deck">
           <% @results_done.each do |food| %>
@@ -105,7 +110,7 @@
           <% end %>
         </div>
       <% else %>
-        <h3>検索結果はありません</h3>
+        <h3>このページに消費した食品の検索結果はありません</h3>
       <% end %>
   
     <div class="actions">

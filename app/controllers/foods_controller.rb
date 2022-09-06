@@ -4,6 +4,8 @@ class FoodsController < ApplicationController
     @today = Date.today
     @foods_done = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(6)
     @foods = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(6)
+    @foods_done_total = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
+    @foods_total = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time)
   end
 
   def new
@@ -49,6 +51,8 @@ class FoodsController < ApplicationController
     @today = Date.today
     @results_done = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(6)
     @results = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(6)
+    @results_done_total = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
+    @results_total = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time)
   end
 
   private

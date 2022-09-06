@@ -26,6 +26,11 @@ crumb :food_edit do
   link "食品編集"
   parent :food_show
 end
+
+crumb :food_search do
+  link "食品検索"
+  parent :food_show
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end
