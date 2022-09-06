@@ -235,6 +235,7 @@ td {
 .pagination > li > a {
   border: none;
   color: #502314;
+  border-radius: 15px;
 }
 
 .pagination > .active > a {
@@ -255,6 +256,15 @@ td {
 .page-item.active .page-link {
   background-color: #cd853f;
   border-color: #cd853f;
+  border-radius: 15px;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 15px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 15px;
 }
 
 .card-title {
@@ -296,4 +306,13 @@ td {
 
 .breadcrumbs {
   padding: 10px;
+}
+
+.card-deck {
+  margin-bottom: 10px;
+}
+
+.card-body-btn {
+  display: flex;
+  justify-content: space-around;
 }
