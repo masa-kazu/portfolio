@@ -18,7 +18,7 @@
       <div class="card-deck">
         <% @foods.each do |food| %>
           <% if (food.time - @today).to_i > -1 %>
-            <div class="food col-sm-4">
+            <div class="food col-md-4">
               <div class="card h-100">
                 <div class="card-img-top">
                   <%= link_to food_path(food) do %>
@@ -52,7 +52,7 @@
               </div>
             </div>
           <% else %>
-            <div class="food col-sm-4">
+            <div class="food col-md-4">
               <div class="card h-100">
                 <div class="card-img-top">
                   <%= link_to food_path(food) do %>
@@ -97,7 +97,7 @@
     <% if @foods_done.length != 0 %>
       <div class="card-deck">
       <% @foods_done.each do |food| %>
-        <div class="food col-sm-4">
+        <div class="food col-md-4">
           <div class="card h-100">
             <div class="card-img-top">
               <%= link_to food_path(food) do %>
