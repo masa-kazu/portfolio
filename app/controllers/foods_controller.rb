@@ -12,6 +12,11 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
+  def show
+    @today = Date.today
+    @food = Food.find(params[:id])
+  end
+
   def create
     @food = current_user.foods.build(food_params)
     if @food.save

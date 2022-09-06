@@ -1,0 +1,46 @@
+<% breadcrumb :food_show %>
+<div class="user-container-head">
+  <h1>食品情報</h1>
+  <div class="actions">
+    <%= link_to '食品編集', edit_food_path(@food),class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <div class="user-field">
+        <% if @food.food_image? %>
+         <%= image_tag @food.food_image.url %>
+        <% else %>
+          <%= image_tag("default.png") %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <% if (@food.time - @today).to_i > -1 %>
+        <div class="card-body">
+          <h5 class="card-title"><%= @food.title %></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= @food.content%></li>
+          <li class="list-group-item">賞味期限:<%= @food.time %></li>
+          <li class="list-group-item">期限切れまで:<%= (@food.time - @today).to_i %>日</li>
+        </ul>
+      <% else %>
+        <div class="card-body">
+          <h5 class="card-title"><span class="badge badge-pill badge-warning">注意</span><%= @food.title %></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= @food.content%></li>
+          <li class="list-group-item">賞味期限:<%= @food.time %></li>
+          <li class="list-group-item">現在<%= (@food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="actions">
+  <%= link_to '戻る', :back, class: "btn btn-outline-secondary btn-sm" %>
+</div>

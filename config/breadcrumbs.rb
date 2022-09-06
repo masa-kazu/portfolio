@@ -12,24 +12,29 @@ crumb :user_edit do
   parent :user_show
 end
 
-crumb :food_show do
+crumb :food_index do
   link "食品一覧", foods_path
   parent :root
 end
 
 crumb :food_add do
   link "食品追加"
-  parent :food_show
+  parent :food_index
 end
 
 crumb :food_edit do
   link "食品編集"
-  parent :food_show
+  parent :food_index
 end
 
 crumb :food_search do
   link "食品検索"
-  parent :food_show
+  parent :food_index
+end
+
+crumb :food_show do
+  link "食品詳細"
+  parent :food_index
 end
 # crumb :projects do
 #   link "Projects", projects_path
