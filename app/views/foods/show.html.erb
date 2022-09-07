@@ -1,47 +1,81 @@
 <% breadcrumb :food_show %>
 <div class="food-container-head">
   <h1>食品情報</h1>
+  <% if @food.done_at? %>
+    <div class="actions">
+      <%= link_to @food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </div>
+  <% else %>
   <div class="actions">
     <%= link_to edit_food_path(@food),class: "btn btn-primary btn-lg border border-white",style: "background-color: #cd853f;" do %>
       <i class="fas fa-edit"></i>
     <% end %>
   </div>
+  <% end %>
 </div>
 
-<div class="card mb-3">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <div class="food-field">
-        <% if @food.food_image? %>
-         <%= image_tag @food.food_image.url %>
-        <% else %>
-          <%= image_tag("default.png") %>
-        <% end %>
+<% if @food.done_at? %>
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <div class="food-field">
+          <% if @food.food_image? %>
+            <%= image_tag @food.food_image.url %>
+          <% else %>
+            <%= image_tag("default.png") %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="col-md-8">
-      <% if (@food.time - @today).to_i > -1 %>
+      <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title"><%= @food.title %></h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><%= @food.content%></li>
-          <li class="list-group-item">賞味期限:<%= @food.time %></li>
-          <li class="list-group-item">期限切れまで:<%= (@food.time - @today).to_i %>日</li>
+          <li class="list-group-item">消費日:<%= @food.done_at.strftime('%Y-%m-%d') %></li>
         </ul>
-      <% else %>
-        <div class="card-body">
-          <h5 class="card-title"><span class="badge badge-pill badge-danger"><i class="fas fa-exclamation"></i></span><%= @food.title %></h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><%= @food.content%></li>
-          <li class="list-group-item">賞味期限:<%= @food.time %></li>
-          <li class="list-group-item">現在<%= (@food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
-        </ul>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <div class="food-field">
+          <% if @food.food_image? %>
+            <%= image_tag @food.food_image.url %>
+          <% else %>
+            <%= image_tag("default.png") %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <% if (@food.time - @today).to_i > -1 %>
+          <div class="card-body">
+            <h5 class="card-title"><%= @food.title %></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= @food.content%></li>
+            <li class="list-group-item">賞味期限:<%= @food.time %></li>
+            <li class="list-group-item">期限切れまで:<%= (@food.time - @today).to_i %>日</li>
+          </ul>
+        <% else %>
+          <div class="card-body">
+            <h5 class="card-title"><span class="badge badge-pill badge-danger"><i class="fas fa-exclamation"></i></span><%= @food.title %></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= @food.content%></li>
+            <li class="list-group-item">賞味期限:<%= @food.time %></li>
+            <li class="list-group-item">現在<%= (@food.time - @today).to_i * -1 %>日、賞味期限切れです。</li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 
 <div class="actions">
   <%= link_to :back, class: "btn btn-outline-secondary btn-lg" do %>
