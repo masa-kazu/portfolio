@@ -6,7 +6,10 @@
     <p>「食品ロス」を減らすためにできることから始めよう！！</p>
   </div>
   <div class="actions">
-    <%= link_to "食品一覧へ", foods_path, class: "btn btn-primary btn-block border border-white",style: "background-color: #cd853f;" %>
+    <%= link_to foods_path, class: "btn btn-primary btn-lg btn-block border border-white",style: "background-color: #cd853f;" do %>
+      <span>食品一覧へ </span>
+      <i class="fas fa-clipboard-list"></i>
+    <% end %>
   </div>
 </div>
 
