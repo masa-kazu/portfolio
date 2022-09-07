@@ -1,5 +1,8 @@
 <header class="sticky-top">
   <nav class="navbar navbar-expand-md">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <i class="fas fa-hamburger"></i>
+      <% end %>
       <%= link_to 'BestBefore', root_path, class: "navbar-brand", data: {"turbolinks" => false} %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
