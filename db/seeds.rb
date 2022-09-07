@@ -54,3 +54,45 @@ Food.create!(
   done_at: "",
   user_id: 1
 )
+Food.create!(
+  title: "塩",
+  content: "伯方の塩",
+  time: "2023-10-25",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "キュウリ",
+  content: "冷蔵保存",
+  time: "2022-10-29",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "ジャム",
+  content: "いちご",
+  time: "2022-11-20",
+  done_at: "",
+  user_id: 1
+)
+Food.create!(
+  title: "ピーナッツクリーム",
+  content: "缶詰",
+  time: "2022-11-25",
+  done_at: "2022-08-25",
+  user_id: 1
+)
+Food.create!(
+  title: "チョコレート",
+  content: "板",
+  time: "2022-10-09",
+  done_at: "2022-07-25",
+  user_id: 1
+)
+Food.create!(
+  title: "鮭",
+  content: "瓶",
+  time: "2023-01-25",
+  done_at: "2022-08-05",
+  user_id: 1
+)
