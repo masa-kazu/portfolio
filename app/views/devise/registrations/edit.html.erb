@@ -1,5 +1,5 @@
 <% breadcrumb :user_edit %>
-<h1>ユーザー情報編集画面</h1>
+<h1>ユーザー情報編集</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -56,10 +56,14 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 -->
   <div class="actions">
-    <%= f.submit "完了",class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
+    <%= button_tag(type: "submit",class: "btn btn-primary border border-white",style: "background-color: #cd853f;") do %>
+      <i class="fas fa-check"></i>
+    <% end %>
   </div>
 <% end %>
 
 <div class="actions">
-  <%= link_to '戻る', :back, class: "btn btn-outline-secondary btn-sm" %>
+  <%= link_to :back, class: "btn btn-outline-secondary btn-sm" do %>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  <% end %>
 </div>

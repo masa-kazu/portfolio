@@ -25,15 +25,18 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "登録する", class: "btn btn-primary w-100 border border-white",style: "background-color: #cd853f;" %>
+          <%= button_tag(type: "submit",class: "btn btn-primary w-100 border border-white",style: "background-color: #cd853f;") do %>
+            <i class="fas fa-user-plus"></i>
+            <span> 登録する</span>
+          <% end %>
         </div>
       <% end %>
 
       <br>
 
       <p class="devise-link">
-        アカウントをお持ちですか？
-        <%= link_to "サインインする", new_user_session_path, class: "devise-link" %>
+        アカウントをお持ちですか？ <i class="fas fa-hand-point-right"></i>
+        <%= link_to "サインインはこちら", new_user_session_path, class: "devise-link" %>
       </p>
     </div>
   </div>

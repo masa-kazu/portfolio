@@ -1,8 +1,10 @@
 <%= search_form_for @q, url: search_foods_path do |f| %>
   <div class="input-group">
-        <%= f.text_field :title_cont, placeholder: "食品を入力...",class: 'form-control' %>
-      <span class="input-group-btn">
-        <%= f.submit '検索',class: "btn btn-primary border border-white",style: "background-color: #cd853f;" %>
-      </span>
+    <%= f.text_field :title_cont, placeholder: "食品名を入力...",class: 'form-control' %>
+    <span class="input-group-btn">
+      <%= button_tag(type: "submit",class: "btn btn-primary border border-white",style: "background-color: #cd853f;") do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    </span>
   </div>
 <% end %>

@@ -17,19 +17,22 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "サインインする", class: "btn btn-primary w-100 border border-white",style: "background-color: #cd853f;" %>
+          <%= button_tag(type: "submit",class: "btn btn-primary w-100 border border-white",style: "background-color: #cd853f;") do %>
+            <i class="fas fa-sign-in-alt"></i>
+            <span> サインイン</span>
+          <% end %>
         </div>
       <% end %>
 
       <br>
 
       <p class="devise-link">
-        アカウントをお持ちでないですか？
-        <%= link_to "登録する", new_user_registration_path, class: "devise-link" %>
+        アカウントをお持ちでないですか？ <i class="fas fa-hand-point-right"></i>
+        <%= link_to "登録はこちら", new_user_registration_path, class: "devise-link" %>
       </p>
 
       <p class="devise-link">
-        ゲストログインの場合にはコチラ。
+        ゲストログインの場合。 <i class="fas fa-hand-point-right"></i>
         <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, class: "devise-link", method: :post %>
       </p>
 

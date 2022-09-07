@@ -23,10 +23,14 @@
 </div>
 
 <div class="actions">
-  <%= f.submit "編集完了", class: "btn btn-info" %>
-</div>
-
-<div class="actions">
-  <%= link_to '戻る', foods_path, class: "btn btn-outline-secondary btn-sm" %>
+  <%= button_tag(type: "submit",class: "btn btn-info") do %>
+    <i class="fas fa-check"></i>
+  <% end %>
 </div>
 <% end %>
+
+<div class="actions">
+  <%= link_to :back, class: "btn btn-outline-secondary btn-sm" do %>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  <% end %>
+</div>
