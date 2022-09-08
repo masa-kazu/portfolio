@@ -4,19 +4,19 @@
   <% if @food.done_at? %>
     <div class="actions">
       <%= link_to @food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger btn-lg" do %>
-        <i class="fas fa-trash-alt"></i>
+        <span class="description">削除</span><i class="fas fa-trash-alt"></i>
       <% end %>
     </div>
   <% else %>
   <div class="actions">
     <%= link_to done_path(@food), method: :post,class: "btn btn-success btn-lg" do %>
-      <i class="fas fa-tasks"></i>
+      <span class="description">消費</span><i class="fas fa-tasks"></i>
     <% end %>
     <%= link_to edit_food_path(@food),class: "btn btn-info btn-lg" do %>
-      <i class="fas fa-edit"></i>
+      <span class="description">編集</span><i class="fas fa-edit"></i>
     <% end %>
     <%= link_to @food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger btn-lg" do %>
-      <i class="fas fa-trash-alt"></i>
+      <span class="description">削除</span><i class="fas fa-trash-alt"></i>
     <% end %>
   </div>
   <% end %>
@@ -85,6 +85,6 @@
 
 <div class="actions">
   <%= link_to :back, class: "btn btn-outline-secondary btn-lg" do %>
-    <i class="fas fa-long-arrow-alt-left"></i>
+    <span class="description_back">戻る</span><i class="fas fa-long-arrow-alt-left"></i>
   <% end %>
 </div>

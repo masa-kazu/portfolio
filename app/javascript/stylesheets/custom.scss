@@ -333,3 +333,245 @@ td {
 .card-img-top {
   margin-top: 10px;
 }
+
+.description {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 11%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+.btn-primary:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-success:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-info:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-danger:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.description_back {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 52%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-outline-secondary:hover .description_back {
+  /* マウスオーバー時のスタイル */
+  top: 52%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.description_edit {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 16%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-primary:hover .description_edit {
+  /* マウスオーバー時のスタイル */
+  top: 17%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.description_top {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  bottom: 20%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-bottom: 10px; /* テキストとの距離 */
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-warning:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-success:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-info:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-danger:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.description_uback {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 74%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-outline-secondary:hover .description_uback {
+  /* マウスオーバー時のスタイル */
+  top: 74%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-outline-secondary:hover .description_uback {
+  /* マウスオーバー時のスタイル */
+  top: 74%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.description_check {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 65%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-info:hover .description_check {
+  /* マウスオーバー時のスタイル */
+  top: 65%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-primary:hover .description_check {
+  /* マウスオーバー時のスタイル */
+  top: 65%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.description_sback {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 98%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-outline-secondary:hover .description_sback {
+  /* マウスオーバー時のスタイル */
+  top: 98%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}

@@ -12,7 +12,7 @@
       <h1><i class="fas fa-list"></i> 食品一覧:<%= @foods_total.length %>件</h1>
         <div class="actions">
           <%= link_to new_food_path,class: "btn btn-primary btn-lg border border-white",style: "background-color: #cd853f;" do %>
-            <i class="fas fa-pen"></i>
+            <span class="description_edit">追加</span><i class="fas fa-pen"></i>
           <% end %>
         </div>
     </div>
@@ -42,16 +42,16 @@
                 <div class="card-body">
                   <div class="card-body-btn">
                     <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
-                      <i class="fas fa-info"></i>
+                      <span class="description_top">詳細</span><i class="fas fa-info"></i>
                     <% end %>
                     <%= link_to done_path(food.id), method: :post,class: "btn btn-success" do %>
-                      <i class="fas fa-tasks"></i>
+                      <span class="description_top">消費</span><i class="fas fa-tasks"></i>
                     <% end %>
                     <%= link_to edit_food_path(food),class: "btn btn-info" do %>
-                      <i class="fas fa-edit"></i>
+                      <span class="description_top">編集</span><i class="fas fa-edit"></i>
                     <% end %>
                     <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
-                      <i class="fas fa-trash-alt"></i>
+                      <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                     <% end %>
                   </div>
                 </div>
@@ -80,16 +80,16 @@
                 <div class="card-body">
                   <div class="card-body-btn">
                     <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
-                      <i class="fas fa-info"></i>
+                      <span class="description_top">詳細</span><i class="fas fa-info"></i>
                     <% end %>
                     <%= link_to done_path(food.id), method: :post,class: "btn btn-success" do %>
-                      <i class="fas fa-tasks"></i>
+                      <span class="description_top">消費</span><i class="fas fa-tasks"></i>
                     <% end %>
                     <%= link_to edit_food_path(food),class: "btn btn-info" do %>
-                      <i class="fas fa-edit"></i>
+                      <span class="description_top">編集</span><i class="fas fa-edit"></i>
                     <% end %>
                     <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
-                      <i class="fas fa-trash-alt"></i>
+                      <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                     <% end %>
                   </div>
                 </div>
@@ -129,10 +129,10 @@
             <div class="card-body">
               <div class="card-body-btn">
                 <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
-                  <i class="fas fa-info"></i>
+                  <span class="description_top">詳細</span><i class="fas fa-info"></i>
                 <% end %>
                 <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
-                  <i class="fas fa-trash-alt"></i>
+                  <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                 <% end %>
               </div>
             </div>
