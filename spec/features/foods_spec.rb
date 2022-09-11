@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature "Foods", type: :feature do
+  let(:image_path) { Rails.root.join('spec/fixture/default.png') }
+  let(:image) { Rack::Test::UploadedFile.new(image_path) }
   describe "food details" do
     before do
       @user = FactoryBot.create(:user)
@@ -14,14 +16,8 @@ RSpec.feature "Foods", type: :feature do
 
     it "食品新規作成確認" do
       sign_in @user
-      visit new_food_path
-      expect(page).to have_content "食品新規作成"
-      fill_in "food[title]",         with: "Test"
-      fill_in "food[content]",        with: "test"
-      fill_in "food[time]",     with: "2022-10-06"
-      click_button '追加'
-      expect(current_path).to eq foods_path
-      expect(page).to have_content "編集"
+      @food = FactoryBot.create(:food)
+      expect(@food).to be_valid
     end
 
   end
