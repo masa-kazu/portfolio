@@ -41,6 +41,7 @@
                 </ul>
                 <div class="card-body">
                   <div class="card-body-btn">
+                  <% if food.user == current_user %>
                     <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
                       <span class="description_top">詳細</span><i class="fas fa-info"></i>
                     <% end %>
@@ -53,6 +54,11 @@
                     <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
                       <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                     <% end %>
+                  <% else %>
+                    <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
+                      <span class="description_top">詳細</span><i class="fas fa-info"></i>
+                    <% end %>
+                  <% end %>
                   </div>
                 </div>
               </div>
@@ -79,6 +85,7 @@
                 </ul>
                 <div class="card-body">
                   <div class="card-body-btn">
+                    <% if food.user == current_user %>
                     <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
                       <span class="description_top">詳細</span><i class="fas fa-info"></i>
                     <% end %>
@@ -91,6 +98,11 @@
                     <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
                       <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                     <% end %>
+                  <% else %>
+                    <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
+                      <span class="description_top">詳細</span><i class="fas fa-info"></i>
+                    <% end %>
+                  <% end %>
                   </div>
                 </div>
               </div>
@@ -128,12 +140,18 @@
               </ul>
             <div class="card-body">
               <div class="card-body-btn">
+              <% if food.user == current_user %>
                 <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
                   <span class="description_top">詳細</span><i class="fas fa-info"></i>
                 <% end %>
                 <%= link_to food, method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
                   <span class="description_top">削除</span><i class="fas fa-trash-alt"></i>
                 <% end %>
+              <% else %>
+                <%= link_to food_path(food),class: "btn btn-warning",style: "color:white;, background-color: #FF8C00;" do %>
+                  <span class="description_top">詳細</span><i class="fas fa-info"></i>
+                <% end %>
+              <% end %>
               </div>
             </div>
           </div>
