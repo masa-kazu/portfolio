@@ -1,0 +1,11 @@
+<%= form_with(model:[@food, @comment], local: true) do |f| %>
+  <div class="comment-form">
+    <%= f.text_area :comment, placeholder: "コメント..." %>
+      <div class="comment-form-btn">
+        <%= button_tag(type: "submit",class: "btn btn-primary btn-lg border border-white",style: "background-color: #cd853f;") do %>
+          <span class="description_send">送信</span><i class="fas fa-paper-plane"></i>
+        <% end %>
+      </div>
+  </div>
+<% end %>
+

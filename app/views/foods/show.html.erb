@@ -81,8 +81,9 @@
     </div>
   </div>
 <% end %>
-
-
+<%= render 'partial/comment_form' %>
+<%= render 'partial/comment' %>
+<div id="page_top"><a href="#"><%= image_pack_tag 'up.png' %></a></div>
 <div class="actions">
   <%= link_to :back, class: "btn btn-outline-secondary btn-lg" do %>
     <i class="fas fa-long-arrow-alt-left"></i>

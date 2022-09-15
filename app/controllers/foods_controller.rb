@@ -15,6 +15,9 @@ class FoodsController < ApplicationController
   def show
     @today = Date.today
     @food = Food.find(params[:id])
+    @comment = Comment.new
+    @comments = @food.comments.page(params[:page]).per(6).reverse_order
+    @comments_total = @food.comments
   end
 
   def create

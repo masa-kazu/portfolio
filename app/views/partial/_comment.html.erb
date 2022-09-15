@@ -1,0 +1,26 @@
+<h1>コメント：<%= @comments_total.count %>件</h1>
+<div class="card-deck">
+  <% @comments.each do |comment| %>
+    <div class="food col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= comment.user.name %></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= comment.comment %></li>
+          <li class="list-group-item">コメント日時:<%= comment.created_at.strftime('%Y-%m-%d') %></li>
+        </ul>
+        <% if comment.user == current_user %>
+          <div class="card-body">
+            <div class="card-body-btn">
+              <%= link_to food_comment_path(comment.food, comment), method: :delete, data: { confirm: '本当に削除しますか?' },class: "btn btn-danger" do %>
+                <span class="description_comment">削除</span><i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= paginate @comments %>

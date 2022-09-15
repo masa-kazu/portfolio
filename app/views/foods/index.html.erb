@@ -104,7 +104,7 @@
     </div>
     <div class="food-container">
       <h1><i class="fas fa-tasks"></i> 消費した食品:<%= @foods_done_total.length %>件</h1>
-    <% if @foods_done.length != 0 %>
+      <% if @foods_done.length != 0 %>
       <div class="card-deck">
       <% @foods_done.each do |food| %>
         <div class="food col-md-4">
