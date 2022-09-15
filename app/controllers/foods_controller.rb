@@ -1,11 +1,12 @@
 class FoodsController < ApplicationController
   before_action :set_q, only: [:index, :search]
+  before_action :ensure_user, only: [:edit, :update, :destroy]
   def index
     @today = Date.today
-    @foods_done = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(9)
-    @foods = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(9)
-    @foods_done_total = Food.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
-    @foods_total = Food.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time)
+    @foods_done = Food.includes(:user).where.not(done_at:nil).page(params[:page]).per(9)
+    @foods = Food.includes(:user).where(done_at:nil).order(:time).page(params[:page]).per(9)
+    @foods_done_total = Food.includes(:user).where.not(done_at:nil)
+    @foods_total = Food.includes(:user).where(done_at:nil).order(:time)
   end
 
   def new
@@ -57,10 +58,10 @@ class FoodsController < ApplicationController
 
   def search
     @today = Date.today
-    @results_done = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id).page(params[:page]).per(9)
-    @results = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time).page(params[:page]).per(9)
-    @results_done_total = @q.result.includes(:user).where.not(done_at:nil).where(user_id:current_user.id)
-    @results_total = @q.result.includes(:user).where(done_at:nil).where(user_id:current_user.id).order(:time)
+    @results_done = @q.result.includes(:user).where.not(done_at:nil).page(params[:page]).per(9)
+    @results = @q.result.includes(:user).where(done_at:nil).order(:time).page(params[:page]).per(9)
+    @results_done_total = @q.result.includes(:user).where.not(done_at:nil)
+    @results_total = @q.result.includes(:user).where(done_at:nil).order(:time)
   end
 
   private
@@ -70,6 +71,12 @@ class FoodsController < ApplicationController
 
   def set_q
     @q = Food.ransack(params[:q])
+  end
+
+  def ensure_user
+    @foods = current_user.foods
+    @food = @foods.find_by(id: params[:id])
+    redirect_to foods_path unless @food
   end
 
 
