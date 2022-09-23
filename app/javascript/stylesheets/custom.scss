@@ -379,34 +379,6 @@ td {
   opacity: 1; /* 不透明度を100％に */
 }
 
-.description_edit {
-  /* ツールチップのスタイル */
-  width: 50px; /* 横幅 */
-  position: absolute;
-  /*left: 2%;*/
-  top: 16%; /* Y軸の位置 */
-  transform: translateX(-50%);
-  margin-top: 10px; /* テキストとの距離 */
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 10px; /* 角の丸み */
-  background-color: black;
-  font-size: 0.7em;
-  color: #fff;
-  text-align: center;
-  visibility: hidden; /* ツールチップを非表示に */
-  opacity: 0; /* 不透明度を0％に */
-  z-index: 1;
-  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
-}
-
-.btn-primary:hover .description_edit {
-  /* マウスオーバー時のスタイル */
-  top: 17%; /* Y軸の位置 */
-  visibility: visible; /* ツールチップを表示 */
-  opacity: 1; /* 不透明度を100％に */
-}
-
 .description_top {
   /* ツールチップのスタイル */
   width: 50px; /* 横幅 */
@@ -482,32 +454,6 @@ td {
   opacity: 1; /* 不透明度を100％に */
 }
 
-.description_send {
-  /* ツールチップのスタイル */
-  width: 50px; /* 横幅 */
-  position: absolute;
-  /*left: 2%;*/
-  top: 51%; /* Y軸の位置 */
-  transform: translateX(-50%);
-  margin-top: 10px; /* テキストとの距離 */
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 10px; /* 角の丸み */
-  background-color: black;
-  font-size: 0.7em;
-  color: #fff;
-  text-align: center;
-  visibility: hidden; /* ツールチップを非表示に */
-  opacity: 0; /* 不透明度を0％に */
-  z-index: 1;
-  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
-}
-.btn-primary:hover .description_send {
-  /* マウスオーバー時のスタイル */
-  top: 51%; /* Y軸の位置 */
-  visibility: visible; /* ツールチップを表示 */
-  opacity: 1; /* 不透明度を100％に */
-}
 .comment-form {
   display: flex;
   align-items: center;
