@@ -30,13 +30,13 @@ BestBefore は、食品の賞味期限を管理するアプリです。
 
 ### 詳細画面
 
-![食品情報画面](https://user-images.githubusercontent.com/64346500/189260129-b55ed4fe-6baa-4b7c-82d2-e4c04c621556.png)
+![食品情報画面](https://user-images.githubusercontent.com/64346500/192142779-053a55f3-a96c-47fe-8f79-5713d1ad6cb3.png)
 
-![食品情報画面_2](https://user-images.githubusercontent.com/64346500/189260144-cd5f034b-b75d-40f5-bcd4-7076aa8a0649.png)
+![食品情報画面2](https://user-images.githubusercontent.com/64346500/192142797-c9af21bb-cfc6-49d0-b5f7-f574446b61e8.png)
 
 ## ER 図
 
-![スクリーンショット 2022-08-18 21 58 01](https://user-images.githubusercontent.com/64346500/185400539-7bb54110-4ba8-4fab-aaab-bcbaa0d3a20e.png)
+![ER図](https://user-images.githubusercontent.com/64346500/192143016-1fe3fe58-e85f-4144-93a6-e757a6a16433.png)
 
 ## 機能
 
@@ -57,6 +57,8 @@ CRUD
 
 パンくずリスト機能
 
+コメント機能
+
 ## 環境
 
 ruby 2.6.9
@@ -70,6 +72,8 @@ git clone https://github.com/masa-kazu/portfolio.git
 cd hoge
 
 bundle install
+
+yarn install
 
 rails db:create
 
