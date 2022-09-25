@@ -1,0 +1,460 @@
+* {
+  float: none;
+  position: static;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+body {
+  background-image: url("../images/パン茶色.png");
+  background-color: #ffebcd;
+  font-size: 14px;
+  color: #502314;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
+    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+.notice,
+.alert {
+  color: #502314;
+  background: #ffebe8;
+  text-align: center;
+  border: 2px solid #502314;
+  padding: 12px;
+  font-weight: 850;
+}
+
+.sticky-top {
+  background-color: #cd853f;
+}
+
+.navbar-brand {
+  font-size: 35px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  /*background-color: #cd853f;
+  color: #fff;*/
+  border-radius: 5px;
+  color: #502314;
+  background-color: #cd853f;
+}
+
+a {
+  /*color: #fff;*/
+  color: #502314;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #502314;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #ffebcd;
+  border-radius: 5px;
+  color: #502314;
+}
+
+.navbar-expand-md {
+  background-color: #cd853f;
+}
+
+.navbar-toggler {
+  background-color: #cd853f;
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 100px 75px 100px;
+  display: block;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+}
+
+.devise-card {
+  border: none;
+}
+
+.form-wrap {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.logo-img {
+  height: 56px;
+  width: 180px;
+}
+
+.form-control {
+  border: 1px solid #dcdfe6;
+  font-size: inherit;
+}
+
+.devise-link {
+  text-align: center;
+  margin: 16px 0;
+  color: #502314;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  color: #fff;
+  background: #cd853f;
+  margin-top: auto;
+  text-align: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 75px 0;
+  }
+  .devise-card {
+    background-color: #fafafa;
+  }
+}
+
+.field {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.user-field {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.food-field {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.actions {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.top-p {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.top-p2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
+    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+h2 {
+  font-weight: bold;
+  padding: 10px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+th {
+  color: #502314;
+}
+
+td {
+  color: #502314;
+}
+
+.food-container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-container-head-search {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-container {
+  padding-bottom: 10px;
+}
+
+.user-container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-containers table {
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-all;
+}
+
+.row {
+  text-align: center;
+  justify-content: end;
+}
+
+.pagination > li > a {
+  border: none;
+  color: #502314;
+  border-radius: 15px;
+}
+
+.pagination > .active > a {
+  background-color: #cd853f;
+  border-radius: 15px;
+  color: #502314;
+}
+
+.pagination > li > a:hover {
+  border-radius: 15px;
+  color: #502314;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: #cd853f;
+  border-color: #cd853f;
+  border-radius: 15px;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 15px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 15px;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-title h5 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.list-group-item {
+  font-size: 18px;
+  text-align: left;
+  background-color: #ffebcd;
+}
+
+.card-text p {
+  text-align: left;
+}
+
+.food {
+  padding: 5px;
+  text-align: center;
+}
+
+.badge-warning {
+  margin-right: 5px;
+}
+
+.input-group {
+  font-size: 23px;
+  padding-right: 25px;
+  padding-left: 25px;
+  align-items: center;
+}
+
+.card {
+  background-color: #ffebcd;
+}
+
+.breadcrumbs {
+  padding: 10px;
+}
+
+.card-deck {
+  margin-bottom: 10px;
+}
+
+.card-body-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-img-top {
+  margin-top: 10px;
+}
+
+.description {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 11%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+.btn-primary:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-success:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-info:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.btn-danger:hover .description {
+  /* マウスオーバー時のスタイル */
+  top: 11%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.description_top {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  bottom: 20%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-bottom: 10px; /* テキストとの距離 */
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+
+.btn-warning:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-success:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-info:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.btn-danger:hover .description_top {
+  /* マウスオーバー時のスタイル */
+  bottom: 12%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+.description_comment {
+  /* ツールチップのスタイル */
+  width: 50px; /* 横幅 */
+  position: absolute;
+  /*left: 2%;*/
+  top: 63%; /* Y軸の位置 */
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: black;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+.btn-danger:hover .description_comment {
+  /* マウスオーバー時のスタイル */
+  top: 63%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+}
